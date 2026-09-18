@@ -1,122 +1,176 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="app">
+      {/* Header */}
+      <header className="header">
+        <div className="logo">
+          <span>M</span>obi.flex
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button className="shop-btn">Shop Now</button>
+      </header>
+
+      {/* Hero */}
+      <section className="hero" id="home">
+        <div className="hero-text">
+          <p className="tagline">SMART ACCESSORIES. BETTER LIFE.</p>
+
+          <h1>
+            Upgrade Your
+            <br />
+            <span>Mobile Experience.</span>
+          </h1>
+
+          <p className="hero-description">
+            Discover quality mobile accessories and everyday tech,
+            carefully selected for style, performance and value.
           </p>
+
+          <div className="hero-buttons">
+            <a href="#products" className="primary-btn">
+              Explore Products
+            </a>
+
+            <a href="#contact" className="secondary-btn">
+              Contact Us
+            </a>
+          </div>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+
+        <div className="hero-card">
+          <div className="product-circle">
+            <div className="phone-icon">📱</div>
+          </div>
+
+          <div className="floating-card card-one">
+            <strong>Premium</strong>
+            <small>Quality Products</small>
+          </div>
+
+          <div className="floating-card card-two">
+            <strong>Trusted</strong>
+            <small>Selected for you</small>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="features">
+        <div>
+          <span>✓</span>
+          <div>
+            <strong>Quality Products</strong>
+            <p>Carefully selected accessories</p>
+          </div>
+        </div>
+
+        <div>
+          <span>✓</span>
+          <div>
+            <strong>Best Value</strong>
+            <p>Great products at fair prices</p>
+          </div>
+        </div>
+
+        <div>
+          <span>✓</span>
+          <div>
+            <strong>Easy Ordering</strong>
+            <p>Simple WhatsApp ordering</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Products */}
+      <section className="products" id="products">
+        <div className="section-heading">
+          <p>OUR COLLECTION</p>
+          <h2>Featured Products</h2>
+          <span>
+            Everyday essentials for your smartphone and technology.
+          </span>
+        </div>
+
+        <div className="product-grid">
+          <div className="product">
+            <div className="product-image">📱</div>
+            <h3>Premium Phone Cases</h3>
+            <p>Stylish protection for your device.</p>
+            <button>View Product</button>
+          </div>
+
+          <div className="product">
+            <div className="product-image">🔌</div>
+            <h3>Fast Chargers</h3>
+            <p>Reliable charging for everyday use.</p>
+            <button>View Product</button>
+          </div>
+
+          <div className="product">
+            <div className="product-image">🎧</div>
+            <h3>Audio Accessories</h3>
+            <p>Enjoy your music wherever you go.</p>
+            <button>View Product</button>
+          </div>
+
+          <div className="product">
+            <div className="product-image">🛡️</div>
+            <h3>Tempered Glass</h3>
+            <p>Extra protection for your display.</p>
+            <button>View Product</button>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="about" id="about">
+        <div>
+          <p className="section-label">ABOUT MOBI.FLEX</p>
+          <h2>Simple. Reliable. Modern.</h2>
+        </div>
+
+        <p>
+          Mobi.flex is built around one simple idea — making quality mobile
+          accessories easier to find. We focus on useful products, clean
+          design and a straightforward buying experience.
+        </p>
+      </section>
+
+      {/* CTA */}
+      <section className="cta" id="contact">
+        <p>READY TO UPGRADE?</p>
+        <h2>Find your next essential accessory.</h2>
+
+        <a
+          href="https://wa.me/919380771682""
+          target="_blank"
+          rel="noreferrer"
         >
-          Count is {count}
-        </button>
+          Order on WhatsApp
+        </a>
       </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      {/* Footer */}
+      <footer>
+        <div className="logo">
+          <span>M</span>obi.flex
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <p>Quality accessories. Better everyday tech.</p>
+
+        <small>© 2026 Mobi.flex. All rights reserved.</small>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
