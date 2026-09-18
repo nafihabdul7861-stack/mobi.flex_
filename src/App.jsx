@@ -170,7 +170,7 @@ function App() {
         <small>© 2026 Mobi.flex. All rights reserved.</small>
       </footer>
     </div>
-  );
+  
 }
 
 export default App;
